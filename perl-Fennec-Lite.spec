@@ -4,10 +4,10 @@
 #
 Name     : perl-Fennec-Lite
 Version  : 0.004
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
-Summary  : 'Minimalist Fennec, the commonly used bits.'
+Summary  : Minimalist Fennec, the commonly used bits.
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -25,6 +25,7 @@ Mouse does for Moose.
 Summary: dev components for the perl-Fennec-Lite package.
 Group: Development
 Provides: perl-Fennec-Lite-devel = %{version}-%{release}
+Requires: perl-Fennec-Lite = %{version}-%{release}
 
 %description dev
 dev components for the perl-Fennec-Lite package.

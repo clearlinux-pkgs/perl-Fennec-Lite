@@ -4,12 +4,13 @@
 #
 Name     : perl-Fennec-Lite
 Version  : 0.004
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
-Summary  : Minimalist Fennec, the commonly used bits.
+Summary  : 'Minimalist Fennec, the commonly used bits.'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Fennec-Lite-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -31,14 +32,24 @@ Requires: perl-Fennec-Lite = %{version}-%{release}
 dev components for the perl-Fennec-Lite package.
 
 
+%package perl
+Summary: perl components for the perl-Fennec-Lite package.
+Group: Default
+Requires: perl-Fennec-Lite = %{version}-%{release}
+
+%description perl
+perl components for the perl-Fennec-Lite package.
+
+
 %prep
 %setup -q -n Fennec-Lite-0.004
+cd %{_builddir}/Fennec-Lite-0.004
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -61,8 +72,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Fennec/Lite.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Fennec::Lite.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Fennec/Lite.pm

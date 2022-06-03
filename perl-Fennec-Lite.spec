@@ -4,7 +4,7 @@
 #
 Name     : perl-Fennec-Lite
 Version  : 0.004
-Release  : 19
+Release  : 20
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
 Summary  : 'Minimalist Fennec, the commonly used bits.'
@@ -79,4 +79,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Fennec/Lite.pm
+/usr/lib/perl5/*

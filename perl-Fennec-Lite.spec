@@ -7,7 +7,7 @@
 #
 Name     : perl-Fennec-Lite
 Version  : 0.004
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
 Summary  : 'Minimalist Fennec, the commonly used bits.'
